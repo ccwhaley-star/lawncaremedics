@@ -2,7 +2,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-const PORT = 3472;
+const PORT = process.env.PORT || 3472;
 const BASE = path.join(__dirname);
 
 const MIME = {

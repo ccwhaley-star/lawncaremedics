@@ -251,6 +251,21 @@ ul {
 }
 
 /* ===== Hero ===== */
+@keyframes heroImageReveal {
+  from { opacity: 0; transform: scale(1.08); }
+  to { opacity: 0.5; transform: scale(1); }
+}
+
+@keyframes heroContentSlide {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroBadgeFade {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .hero {
   position: relative;
   min-height: 100vh;
@@ -265,13 +280,14 @@ ul {
   position: absolute;
   inset: 0;
   background: url('images/hero.jpeg') center/cover no-repeat;
-  opacity: 0.35;
+  opacity: 0;
+  animation: heroImageReveal 1.4s ease-out 0.2s forwards;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(15,61,15,0.85) 0%, rgba(30,111,30,0.75) 50%, rgba(34,139,34,0.7) 100%);
+  background: linear-gradient(135deg, rgba(15,61,15,0.75) 0%, rgba(30,111,30,0.65) 50%, rgba(34,139,34,0.6) 100%);
 }
 
 .hero-content {
@@ -293,6 +309,8 @@ ul {
   font-weight: 500;
   margin-bottom: 24px;
   backdrop-filter: blur(4px);
+  opacity: 0;
+  animation: heroBadgeFade 0.6s ease-out 0.4s forwards;
 }
 
 .hero h1 {
@@ -301,6 +319,8 @@ ul {
   color: var(--white);
   line-height: 1.1;
   margin-bottom: 20px;
+  opacity: 0;
+  animation: heroContentSlide 0.8s ease-out 0.6s forwards;
 }
 
 .text-accent {
@@ -324,6 +344,8 @@ ul {
   max-width: 560px;
   margin-bottom: 36px;
   line-height: 1.7;
+  opacity: 0;
+  animation: heroContentSlide 0.8s ease-out 0.8s forwards;
 }
 
 .hero-actions {
@@ -331,12 +353,16 @@ ul {
   gap: 16px;
   flex-wrap: wrap;
   margin-bottom: 48px;
+  opacity: 0;
+  animation: heroContentSlide 0.8s ease-out 1s forwards;
 }
 
 .hero-trust {
   display: flex;
   gap: 28px;
   flex-wrap: wrap;
+  opacity: 0;
+  animation: heroContentSlide 0.8s ease-out 1.2s forwards;
 }
 
 .trust-item {
@@ -419,6 +445,12 @@ ul {
   border-radius: var(--radius-md);
   margin-bottom: 20px;
   color: var(--green-600);
+}
+
+.icon-green {
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(27%) sepia(92%) saturate(432%) hue-rotate(88deg) brightness(95%) contrast(92%);
+  mix-blend-mode: multiply;
 }
 
 .service-card h3 {
@@ -1153,27 +1185,27 @@ a.contact-item:hover {
   }
 
   .services {
-    padding: 60px 0;
+    padding: 40px 0;
   }
 
   .about {
-    padding: 60px 0;
+    padding: 40px 0;
   }
 
   .testimonials {
-    padding: 60px 0;
+    padding: 40px 0;
   }
 
   .faq {
-    padding: 60px 0;
+    padding: 40px 0;
   }
 
   .contact {
-    padding: 60px 0;
+    padding: 40px 0;
   }
 
   .section-header {
-    margin-bottom: 36px;
+    margin-bottom: 28px;
   }
 
   .services-grid {
