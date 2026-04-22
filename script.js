@@ -2,16 +2,40 @@
 const mobileToggle = document.getElementById('mobileToggle');
 const navLinks = document.getElementById('navLinks');
 
-mobileToggle.addEventListener('click', () => {
-  mobileToggle.classList.toggle('active');
-  navLinks.classList.toggle('open');
+if (mobileToggle && navLinks) {
+  mobileToggle.addEventListener('click', () => {
+    mobileToggle.classList.toggle('active');
+    navLinks.classList.toggle('open');
+  });
+
+  // Close mobile menu on link click (but not on dropdown toggle)
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileToggle.classList.remove('active');
+      navLinks.classList.remove('open');
+    });
+  });
+}
+
+// ===== Dropdown Menu =====
+document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+  const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+  if (!toggle) return;
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = dropdown.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
 });
 
-// Close mobile menu on link click
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    mobileToggle.classList.remove('active');
-    navLinks.classList.remove('open');
+// Close dropdown when clicking outside
+document.addEventListener('click', (e) => {
+  document.querySelectorAll('.nav-dropdown.open').forEach(dropdown => {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove('open');
+      const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+      if (toggle) toggle.setAttribute('aria-expanded', 'false');
+    }
   });
 });
 
@@ -41,6 +65,7 @@ function updateActiveNav() {
 window.addEventListener('scroll', updateActiveNav);
 
 // ===== FAQ Accordion =====
+// Works on pages that have FAQ (homepage); no-ops on blog pages
 document.querySelectorAll('.faq-question').forEach(button => {
   button.addEventListener('click', () => {
     const item = button.parentElement;
@@ -82,7 +107,8 @@ function initScrollAnimations() {
 initScrollAnimations();
 
 // ===== Contact Form =====
-document.getElementById('contactForm').addEventListener('submit', (e) => {
+const contactForm = document.getElementById('contactForm');
+if (contactForm) contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const btn = e.target.querySelector('button[type="submit"]');
   const originalText = btn.textContent;
