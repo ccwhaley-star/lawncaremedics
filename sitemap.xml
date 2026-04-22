@@ -6,46 +6,80 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Service Pages -->
+  <url>
+    <loc>https://lawncaremedics.com/mowing/</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lawncaremedics.com/fertilization/</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lawncaremedics.com/aeration/</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lawncaremedics.com/mulch-rock/</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lawncaremedics.com/cleanup/</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Blog -->
   <url>
     <loc>https://lawncaremedics.com/blog/</loc>
     <lastmod>2026-04-22</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lawncaremedics.com/blog/why-lawn-fertilization-matters.html</loc>
     <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://lawncaremedics.com/blog/spring-lawn-cleanup-checklist.html</loc>
     <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://lawncaremedics.com/blog/pre-emergent-timing-nebraska.html</loc>
     <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://lawncaremedics.com/blog/when-to-aerate-lawn-nebraska.html</loc>
     <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://lawncaremedics.com/blog/mulch-vs-rock-landscaping.html</loc>
     <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://lawncaremedics.com/blog/how-often-to-water-lawn-omaha.html</loc>
     <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 </urlset>

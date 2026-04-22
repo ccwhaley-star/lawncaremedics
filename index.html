@@ -177,7 +177,19 @@
       </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
+        <li class="nav-dropdown">
+          <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            Services
+            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <ul class="nav-dropdown-menu">
+            <li><a href="mowing/">Mowing</a></li>
+            <li><a href="fertilization/">Fertilization</a></li>
+            <li><a href="aeration/">Aeration &amp; Over-Seeding</a></li>
+            <li><a href="mulch-rock/">Mulch &amp; Rock</a></li>
+            <li><a href="cleanup/">Lawn Cleanup</a></li>
+          </ul>
+        </li>
         <li class="nav-dropdown">
           <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
             Resources
@@ -232,7 +244,7 @@
       </div>
       <div class="services-grid">
         <!-- Mowing -->
-        <div class="service-card">
+        <a href="mowing/" class="service-card">
           <div class="service-icon">
             <img src="img/mower-icon-t.png" alt="Lawn mowing service in Gretna and Omaha" width="32" height="32" class="icon-green" loading="lazy">
           </div>
@@ -242,9 +254,10 @@
             <li>Edging where yard meets driveway & sidewalk</li>
             <li>All clippings blown off surfaces</li>
           </ul>
-        </div>
+          <span class="service-card-link">Learn more →</span>
+        </a>
         <!-- Fertilization -->
-        <div class="service-card">
+        <a href="fertilization/" class="service-card">
           <div class="service-icon">
             <img src="img/fertilization-icon.png" alt="Lawn fertilization and weed control in Omaha metro" width="38" height="38" class="icon-green" loading="lazy">
           </div>
@@ -254,9 +267,10 @@
             <li>Available for all lawn conditions & sizes</li>
             <li>Weed control included</li>
           </ul>
-        </div>
+          <span class="service-card-link">Learn more →</span>
+        </a>
         <!-- Aeration -->
-        <div class="service-card">
+        <a href="aeration/" class="service-card">
           <div class="service-icon">
             <img src="img/aeration-icon-t.png" alt="Lawn aeration and over-seeding service" width="32" height="32" class="icon-green" loading="lazy">
           </div>
@@ -266,9 +280,10 @@
             <li>Recommended to aerate before over-seeding</li>
             <li>Promotes thick, healthy growth</li>
           </ul>
-        </div>
+          <span class="service-card-link">Learn more →</span>
+        </a>
         <!-- Mulch/Rock -->
-        <div class="service-card">
+        <a href="mulch-rock/" class="service-card">
           <div class="service-icon">
             <img src="img/rock-mulch-icon-t.png" alt="Mulch and rock delivery and installation" width="26" height="26" class="icon-green" loading="lazy">
           </div>
@@ -278,9 +293,10 @@
             <li>Bed edging</li>
             <li>Weed barrier installation</li>
           </ul>
-        </div>
+          <span class="service-card-link">Learn more →</span>
+        </a>
         <!-- Lawn Cleanup -->
-        <div class="service-card">
+        <a href="cleanup/" class="service-card">
           <div class="service-icon">
             <img src="img/broom-icon.png" alt="Spring and fall lawn cleanup service" width="32" height="32" class="icon-green" loading="lazy">
           </div>
@@ -290,7 +306,8 @@
             <li>Landscaping weed removal</li>
             <li>Shrub pruning & leaf removal</li>
           </ul>
-        </div>
+          <span class="service-card-link">Learn more →</span>
+        </a>
         <!-- And More -->
         <div class="service-card service-card-cta">
           <div class="service-icon">

@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lawn Care Blog | Tips for Gretna &amp; Omaha Homeowners | Lawn Care Medics</title>
-  <meta name="description" content="Nebraska lawn care tips, seasonal guides, and expert advice for Gretna and Omaha homeowners. Local knowledge from Lawn Care Medics.">
+  <title>Lawn Mowing Services in Gretna &amp; Omaha | Lawn Care Medics</title>
+  <meta name="description" content="Professional weekly lawn mowing with trimming, edging, and surface cleanup. Serving Gretna, Omaha, Papillion, La Vista, Bellevue &amp; Elkhorn. Free quotes.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://lawncaremedics.com/blog/">
+  <link rel="canonical" href="https://lawncaremedics.com/mowing/">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Lawn Care Blog | Tips for Gretna &amp; Omaha Homeowners">
-  <meta property="og:description" content="Nebraska lawn care tips, seasonal guides, and expert advice for Gretna and Omaha homeowners.">
-  <meta property="og:url" content="https://lawncaremedics.com/blog/">
+  <meta property="og:title" content="Lawn Mowing Services in Gretna &amp; Omaha">
+  <meta property="og:description" content="Weekly lawn mowing with trimming, edging, and surface cleanup across the Omaha metro.">
+  <meta property="og:url" content="https://lawncaremedics.com/mowing/">
   <meta property="og:image" content="https://lawncaremedics.com/images/hero.jpeg">
   <meta property="og:site_name" content="Lawn Care Medics">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Lawn Care Blog | Lawn Care Medics">
-  <meta name="twitter:description" content="Nebraska lawn care tips and seasonal guides.">
+  <meta name="twitter:title" content="Lawn Mowing Services in Gretna &amp; Omaha">
+  <meta name="twitter:description" content="Weekly lawn mowing with trimming, edging, and surface cleanup.">
   <meta name="twitter:image" content="https://lawncaremedics.com/images/hero.jpeg">
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%23dc2626'/><text x='50' y='72' font-size='60' font-weight='bold' text-anchor='middle' fill='white'>+</text></svg>">
@@ -28,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
-  <link rel="stylesheet" href="blog.css">
+  <link rel="stylesheet" href="../blog/blog.css">
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BF2FDR6KMM"></script>
   <script>
@@ -54,15 +54,26 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "Lawn Care Medics Blog",
-    "description": "Nebraska lawn care tips, seasonal guides, and expert advice for Gretna and Omaha homeowners.",
-    "url": "https://lawncaremedics.com/blog/",
-    "publisher": {
-      "@type": "Organization",
+    "@type": "Service",
+    "serviceType": "Lawn Mowing",
+    "name": "Lawn Mowing Services",
+    "description": "Weekly lawn mowing with trimming, edging, and surface cleanup across the Omaha metro.",
+    "provider": {
+      "@type": "LocalBusiness",
       "name": "Lawn Care Medics",
-      "logo": { "@type": "ImageObject", "url": "https://lawncaremedics.com/images/logo.png" }
-    }
+      "telephone": "+1-402-521-9322",
+      "url": "https://lawncaremedics.com",
+      "address": { "@type": "PostalAddress", "addressLocality": "Gretna", "addressRegion": "NE", "addressCountry": "US" }
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Gretna" },
+      { "@type": "City", "name": "Omaha" },
+      { "@type": "City", "name": "Papillion" },
+      { "@type": "City", "name": "La Vista" },
+      { "@type": "City", "name": "Bellevue" },
+      { "@type": "City", "name": "Elkhorn" }
+    ],
+    "offers": { "@type": "Offer", "priceCurrency": "USD", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "40", "priceCurrency": "USD" } }
   }
   </script>
   <script type="application/ld+json">
@@ -71,7 +82,8 @@
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lawncaremedics.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://lawncaremedics.com/blog/" }
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://lawncaremedics.com/#services" },
+      { "@type": "ListItem", "position": 3, "name": "Mowing" }
     ]
   }
   </script>
@@ -110,7 +122,7 @@
             <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <ul class="nav-dropdown-menu">
-            <li><a href="./">Blog</a></li>
+            <li><a href="../blog/">Blog</a></li>
             <li><a href="../#faq">FAQ</a></li>
           </ul>
         </li>
@@ -123,76 +135,64 @@
     <section class="blog-hero">
       <div class="container blog-hero-content">
         <nav class="blog-breadcrumb" aria-label="Breadcrumb">
-          <a href="../">Home</a> <span>›</span> <span>Blog</span>
+          <a href="../">Home</a> <span>›</span> <a href="../#services">Services</a> <span>›</span> <span>Mowing</span>
         </nav>
-        <h1>Lawn Care Tips for Gretna &amp; Omaha Homeowners</h1>
+        <h1>Professional Lawn Mowing in Gretna &amp; Omaha</h1>
         <div class="blog-meta">
-          <span>Seasonal guides, expert tips, and local insights from Nebraska's lawn care medics.</span>
+          <span>Clean cuts, sharp edges, reliable weekly service</span>
         </div>
       </div>
     </section>
 
-    <section class="blog-index">
-      <div class="container">
-        <div class="blog-grid">
+    <article class="blog-article">
+      <div class="container blog-body">
+        <p>A mowed lawn isn't just about how it looks — it's about how healthy the grass stays. Cut too short, too often, or with dull blades and you stress the lawn instead of maintaining it. Our mowing service is built around what actually keeps Nebraska lawns thriving: proper cut height, clean edges, and consistent weekly service from April through October.</p>
 
-          <article class="blog-card">
-            <div class="blog-card-body">
-              <span class="blog-card-tag">Fertilization</span>
-              <h3>Why Lawn Fertilization Matters in Nebraska</h3>
-              <p>Why fertilizing isn't optional for Nebraska lawns, and what a proper 6-step program actually looks like.</p>
-              <a href="why-lawn-fertilization-matters.html" class="blog-card-link">Read article →</a>
-            </div>
-          </article>
+        <h2>What's Included in Every Visit</h2>
+        <ul>
+          <li><strong>Mowing at optimal height</strong> for Nebraska cool-season grasses (3–3.5")</li>
+          <li><strong>Trimming</strong> around fences, house, trees, and landscaping</li>
+          <li><strong>Edging</strong> where grass meets driveways and sidewalks</li>
+          <li><strong>Blowing all clippings</strong> off driveways, sidewalks, and patios</li>
+          <li><strong>Sharp blades, every time</strong> — dull blades tear grass, sharp blades cut it cleanly</li>
+        </ul>
 
-          <article class="blog-card">
-            <div class="blog-card-body">
-              <span class="blog-card-tag">Seasonal</span>
-              <h3>Spring Lawn Cleanup Checklist for Gretna &amp; Omaha</h3>
-              <p>7 steps in the right order to revive your lawn after a Nebraska winter — plus what to skip.</p>
-              <a href="spring-lawn-cleanup-checklist.html" class="blog-card-link">Read article →</a>
-            </div>
-          </article>
+        <h2>How Often We Mow</h2>
+        <p><strong>Weekly service</strong> is standard during peak growing season (April through October). <strong>Biweekly</strong> is available for specific situations or off-season trim-ups. We put you on an automatic schedule so you never have to call and ask when we're coming.</p>
+        <div class="blog-callout">
+          <p>Rain delays are handled automatically. If we can't mow safely on your scheduled day, we'll move you to the next dry day — usually within 24–48 hours.</p>
+        </div>
 
-          <article class="blog-card">
-            <div class="blog-card-body">
-              <span class="blog-card-tag">Weed Control</span>
-              <h3>Pre-Emergent Timing in Nebraska</h3>
-              <p>The exact window for stopping crabgrass in Omaha — and what to do if you miss it.</p>
-              <a href="pre-emergent-timing-nebraska.html" class="blog-card-link">Read article →</a>
-            </div>
-          </article>
+        <h2>Pricing</h2>
+        <p>Standard residential mowing starts at <strong>$40 per visit</strong>, with the final rate based on your lot size, gate access, and any add-on services. Every quote is free — no contracts, no hidden fees.</p>
 
-          <article class="blog-card">
-            <div class="blog-card-body">
-              <span class="blog-card-tag">Aeration</span>
-              <h3>When to Aerate Your Lawn in Nebraska</h3>
-              <p>Why fall aeration beats spring in Omaha, signs your lawn needs it, and what to do right after.</p>
-              <a href="when-to-aerate-lawn-nebraska.html" class="blog-card-link">Read article →</a>
-            </div>
-          </article>
+        <h2>Why Cut Height Matters in Nebraska</h2>
+        <p>Scalping a lawn (cutting too short) is the single most common cause of thin, weedy turf in the Omaha metro. At 3" or taller:</p>
+        <ul>
+          <li>Grass shades out crabgrass and broadleaf weeds naturally</li>
+          <li>Deeper roots develop, making the lawn more drought-tolerant</li>
+          <li>Soil stays cooler and retains moisture longer through summer</li>
+        </ul>
+        <p>We follow the "one-third rule" — never removing more than ⅓ of the grass blade in a single cut — which is the standard from UNL Extension and every other turf authority.</p>
 
-          <article class="blog-card">
-            <div class="blog-card-body">
-              <span class="blog-card-tag">Landscaping</span>
-              <h3>Mulch vs. Rock: Which Is Better for Omaha?</h3>
-              <p>A practical side-by-side comparison — cost, maintenance, and what works best in Nebraska weather.</p>
-              <a href="mulch-vs-rock-landscaping.html" class="blog-card-link">Read article →</a>
-            </div>
-          </article>
+        <h2>Service Areas</h2>
+        <p>We provide weekly mowing service throughout the Omaha metro: Gretna, Omaha, Papillion, La Vista, Bellevue, Elkhorn, and the surrounding communities.</p>
 
-          <article class="blog-card">
-            <div class="blog-card-body">
-              <span class="blog-card-tag">Watering</span>
-              <h3>How Often Should You Water Your Omaha Lawn?</h3>
-              <p>A Nebraska-specific watering schedule, morning vs. evening timing, and signs you're overdoing it.</p>
-              <a href="how-often-to-water-lawn-omaha.html" class="blog-card-link">Read article →</a>
-            </div>
-          </article>
+        <h2>Related Reading</h2>
+        <p>Want to get more out of your lawn between mows? Check out our guides:</p>
+        <ul>
+          <li><a href="../blog/how-often-to-water-lawn-omaha.html">How Often to Water Your Omaha Lawn</a></li>
+          <li><a href="../blog/spring-lawn-cleanup-checklist.html">Spring Lawn Cleanup Checklist</a></li>
+          <li><a href="../blog/why-lawn-fertilization-matters.html">Why Lawn Fertilization Matters</a></li>
+        </ul>
 
+        <div class="blog-cta">
+          <h3>Ready for a Weekly Mow?</h3>
+          <p>Get a free quote in 24 hours. No contracts, no obligation — just reliable service from a local team that cares about your lawn.</p>
+          <a href="../#contact" class="btn btn-lg">Get a Free Quote</a>
         </div>
       </div>
-    </section>
+    </article>
   </main>
 
   <footer class="footer">
@@ -212,7 +212,7 @@
           <h4>Quick Links</h4>
           <a href="../">Home</a>
           <a href="../#services">Services</a>
-          <a href="./">Blog</a>
+          <a href="../blog/">Blog</a>
           <a href="../#faq">FAQ</a>
           <a href="../#contact">Contact</a>
         </div>

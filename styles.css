@@ -539,12 +539,37 @@ ul {
   border-radius: var(--radius-lg);
   border: 1px solid var(--neutral-200);
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  color: inherit;
 }
 
 .service-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-xl);
   border-color: var(--green-200, #bbf7d0);
+}
+
+/* Link styling for service cards that are now anchors */
+a.service-card {
+  text-decoration: none;
+}
+
+.service-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--green-700);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: auto;
+  padding-top: 18px;
+  transition: var(--transition);
+}
+
+a.service-card:hover .service-card-link {
+  color: var(--green-800);
+  gap: 10px;
 }
 
 .service-icon {
