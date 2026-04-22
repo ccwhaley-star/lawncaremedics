@@ -391,7 +391,18 @@ ul {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('images/hero.jpeg') center/cover no-repeat;
+  background-image: url('images/hero.jpeg');
+  background-image: -webkit-image-set(
+    url('images/hero.webp') type('image/webp'),
+    url('images/hero.jpeg') type('image/jpeg')
+  );
+  background-image: image-set(
+    url('images/hero.webp') type('image/webp'),
+    url('images/hero.jpeg') type('image/jpeg')
+  );
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   opacity: 0;
   animation: heroImageReveal 1.4s ease-out 0.2s forwards;
 }

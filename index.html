@@ -33,7 +33,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="image" href="images/hero.jpeg" fetchpriority="high">
+  <link rel="preload" as="image" href="images/hero.webp" type="image/webp" fetchpriority="high">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
@@ -113,10 +113,59 @@
       "ratingCount": "8",
       "reviewCount": "8"
     },
+    "review": [
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Madyson H." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Caleb and his team are amazing! They take great care of my lawn and are usually super quick about it too. They always do such an amazing job!"
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Micah Y." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "They do an excellent job. The lawn looks great. They communicate with you and make it easy to work with them. This company is the best value in Omaha for lawn care."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Ann B." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Caleb and his crew do an incredible job of mowing and lawn care services for us! He is great at communicating, reliable, and very easy to work with!"
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "The Rowlands" },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "The Lawn Care Medics team provided prompt service when we needed our lawn mowed and did a great job. Highly recommend and will be using their service again."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Peggy J." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Awesome young man, could not be happier with anyone else. He goes above and beyond to satisfy his clients."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Gauri C." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Great service. Very timely and communicative. Highly recommend them and would be using them again next year."
+      }
+    ],
     "sameAs": [
       "https://maps.app.goo.gl/oMuxESQJEUkaxM8R7",
       "https://www.facebook.com/people/Lawn-Care-Medics/61558996748451/",
       "https://www.instagram.com/lawncaremedics"
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: Breadcrumbs (root) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lawncaremedics.com/" }
     ]
   }
   </script>

@@ -288,6 +288,42 @@
   margin-bottom: 32px;
 }
 
+/* Inline related posts widget (inside article body) */
+.related-posts-inline {
+  margin: 64px 0 32px;
+  padding-top: 48px;
+  border-top: 1px solid var(--neutral-200);
+}
+
+.related-posts-inline h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--neutral-900);
+  margin: 0 0 24px;
+}
+
+.related-posts-inline .blog-grid {
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.related-posts-inline .blog-card {
+  border-radius: var(--radius-md);
+}
+
+.related-posts-inline .blog-card-body {
+  padding: 20px;
+}
+
+.related-posts-inline .blog-card h3 {
+  font-size: 1.05rem;
+}
+
+.related-posts-inline .blog-card p {
+  font-size: 0.88rem;
+  margin-bottom: 14px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .blog-hero {
