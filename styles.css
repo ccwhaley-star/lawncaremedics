@@ -670,6 +670,68 @@ a.service-card:hover .service-card-link {
   border-color: var(--green-100);
 }
 
+/* ===== Service Areas ===== */
+.service-areas {
+  padding: 100px 0;
+  background: var(--white);
+}
+
+.service-areas-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.service-area-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 24px 20px;
+  background: var(--white);
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-lg);
+  color: inherit;
+  transition: var(--transition);
+}
+
+.service-area-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--green-300, #86efac);
+}
+
+.service-area-card svg {
+  color: var(--green-600);
+  flex-shrink: 0;
+}
+
+.service-area-card strong {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: 2px;
+}
+
+.service-area-card span {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--neutral-500);
+  line-height: 1.4;
+}
+
+@media (max-width: 1024px) {
+  .service-areas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .service-areas-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ===== Photo Banner ===== */
 .photo-banner {
   overflow: hidden;
@@ -1178,7 +1240,7 @@ a.contact-item:hover {
 
 .footer-top {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 48px;
   padding-bottom: 48px;
   border-bottom: 1px solid rgba(255,255,255,0.08);
