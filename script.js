@@ -106,24 +106,48 @@ function initScrollAnimations() {
 
 initScrollAnimations();
 
-// ===== Contact Form =====
+// ===== Contact Form (Netlify Forms via AJAX) =====
 const contactForm = document.getElementById('contactForm');
 if (contactForm) contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  const btn = e.target.querySelector('button[type="submit"]');
+  const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
   const originalText = btn.textContent;
   btn.textContent = 'Sending...';
   btn.disabled = true;
 
-  // Simulate form submission
-  setTimeout(() => {
-    btn.textContent = 'Request Sent!';
-    btn.style.background = '#16a34a';
-    e.target.reset();
-    setTimeout(() => {
-      btn.textContent = originalText;
-      btn.style.background = '';
-      btn.disabled = false;
-    }, 3000);
-  }, 1000);
+  const data = new FormData(form);
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams(data).toString()
+  })
+    .then((response) => {
+      if (!response.ok) throw new Error('Network response was not ok');
+      btn.textContent = 'Request Sent!';
+      btn.style.background = '#16a34a';
+      form.reset();
+      // Track conversion in GA + Meta Pixel
+      if (typeof gtag === 'function') {
+        gtag('event', 'generate_lead', { event_category: 'Contact', event_label: 'Homepage Form' });
+      }
+      if (typeof fbq === 'function') {
+        fbq('track', 'Lead');
+      }
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 4000);
+    })
+    .catch((error) => {
+      console.error('Form submission error:', error);
+      btn.textContent = 'Error — try again';
+      btn.style.background = '#dc2626';
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 4000);
+    });
 });
