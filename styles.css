@@ -1524,3 +1524,106 @@ a.contact-item:hover {
     justify-content: center;
   }
 }
+
+/* =====================================================
+   Design polish — sticky CTA, trust strip, testimonials
+   ===================================================== */
+
+/* --- Expanded trust strip --- */
+.trust-item-rating {
+  background: rgba(255,255,255,0.12);
+  padding: 5px 12px;
+  border-radius: 100px;
+  backdrop-filter: blur(4px);
+}
+
+.trust-item-rating .trust-star {
+  color: #fbbc05;
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.trust-item-rating strong {
+  color: var(--white);
+  font-weight: 700;
+}
+
+/* --- Upgraded testimonial cards --- */
+.testimonial-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.testimonial-top .stars {
+  margin-bottom: 0;
+}
+
+.google-badge {
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.author-avatar {
+  /* Will be overridden by inline style for unique per-reviewer color */
+  background: var(--green-600);
+  color: var(--white) !important;
+  font-weight: 700;
+}
+
+.testimonial-author span {
+  color: var(--neutral-500);
+  font-size: 0.8rem;
+}
+
+/* --- Sticky Mobile CTA Bar --- */
+.mobile-cta-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+  background: var(--white);
+  border-top: 1px solid var(--neutral-200);
+  box-shadow: 0 -4px 16px rgba(0,0,0,0.08);
+  gap: 10px;
+}
+
+.mobile-cta-call,
+.mobile-cta-quote {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.mobile-cta-call {
+  flex: 0 0 38%;
+  background: var(--white);
+  color: var(--green-700);
+  border: 2px solid var(--green-600);
+}
+
+.mobile-cta-call:active { background: var(--green-50); }
+
+.mobile-cta-quote {
+  flex: 1;
+  background: var(--green-600);
+  color: var(--white);
+  border: 2px solid var(--green-600);
+}
+
+.mobile-cta-quote:active { background: var(--green-700); }
+
+@media (max-width: 768px) {
+  .mobile-cta-bar { display: flex; }
+  body { padding-bottom: 78px; }
+}
