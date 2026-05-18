@@ -1627,3 +1627,35 @@ a.contact-item:hover {
   .mobile-cta-bar { display: flex; }
   body { padding-bottom: 78px; }
 }
+
+/* =====================================================
+   Mobile polish — iOS zoom fix, scroll offset, trust strip
+   ===================================================== */
+
+/* Prevent iOS Safari from zooming when input is tapped (font-size must be ≥16px) */
+@media (max-width: 768px) {
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px;
+  }
+
+  /* Trust strip 2x2 grid instead of 4-row stack */
+  .hero-trust {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    justify-content: center;
+  }
+
+  .trust-item {
+    flex: 0 0 auto;
+    font-size: 0.82rem;
+  }
+
+  /* Contact section scroll offset — so form lands above sticky CTA bar */
+  #contact { scroll-margin-bottom: 90px; }
+}
+
+/* Smooth scrolling globally for anchor links */
+html { scroll-behavior: smooth; }
