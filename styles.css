@@ -1666,7 +1666,7 @@ html { scroll-behavior: smooth; }
   align-items: center;
   gap: 8px;
   margin-top: 24px;
-  margin-bottom: 4px;
+  margin-bottom: 20px;
   font-size: 0.95rem;
   color: rgba(255,255,255,0.92);
   transition: var(--transition);
