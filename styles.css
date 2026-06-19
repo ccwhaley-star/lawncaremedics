@@ -1659,3 +1659,36 @@ a.contact-item:hover {
 
 /* Smooth scrolling globally for anchor links */
 html { scroll-behavior: smooth; }
+
+/* Hero Google rating badge (Vintage Blooms pattern) */
+.hero-google-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  margin-bottom: 4px;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.92);
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.hero-google-rating:hover {
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+.hero-google-rating svg {
+  flex-shrink: 0;
+}
+
+.hero-google-stars {
+  color: #fbbc05;
+  letter-spacing: 2px;
+  font-size: 1rem;
+}
+
+.hero-google-rating b {
+  color: var(--white);
+  font-weight: 700;
+}
