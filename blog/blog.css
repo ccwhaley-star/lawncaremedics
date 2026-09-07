@@ -14,8 +14,14 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: url('../images/hero.jpeg') center/cover no-repeat;
+  background: url('../images/hero.webp') center/cover no-repeat;
   opacity: 0.12;
+}
+
+@media (max-width: 768px) {
+  .blog-hero::before {
+    background-image: url('../images/hero-960.webp');
+  }
 }
 
 .blog-hero-content {

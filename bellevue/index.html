@@ -28,28 +28,31 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"></noscript>
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="../blog/blog.css">
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BF2FDR6KMM"></script>
+  <!-- Google Analytics + Meta Pixel: stubs run now, loaders fetched 1s after page load -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-BF2FDR6KMM');
-  </script>
-  <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
     if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
+    n.queue=[]}(window, document);
     fbq('init', '282429905966327');
     fbq('track', 'PageView');
+    window.addEventListener('load', function(){ setTimeout(function(){
+      var g = document.createElement('script'); g.async = true;
+      g.src = 'https://www.googletagmanager.com/gtag/js?id=G-BF2FDR6KMM'; document.head.appendChild(g);
+      var f = document.createElement('script'); f.async = true;
+      f.src = 'https://connect.facebook.net/en_US/fbevents.js'; document.head.appendChild(f);
+    }, 1000); });
   </script>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=282429905966327&ev=PageView&noscript=1" alt=""></noscript>
 
@@ -96,7 +99,7 @@
   </script>
 
   <style>
-    .blog-hero { background: linear-gradient(135deg, rgba(10,45,10,0.94) 0%, rgba(34,139,34,0.85) 100%), url('../images/landscaping.jpg') center/cover no-repeat; }
+    .blog-hero { background: linear-gradient(135deg, rgba(10,45,10,0.94) 0%, rgba(34,139,34,0.85) 100%), url('../images/landscaping.webp') center/cover no-repeat; }
     .blog-hero::before { display: none; }
     .blog-hero h1, .blog-hero .blog-meta, .blog-hero .blog-breadcrumb { position: relative; z-index: 2; }
   </style>
@@ -251,6 +254,6 @@
     </div>
   </footer>
 
-  <script src="../script.js"></script>
+  <script src="../script.js" defer></script>
 </body>
 </html>

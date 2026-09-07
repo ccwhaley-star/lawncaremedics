@@ -34,31 +34,33 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="image" href="images/hero.webp" type="image/webp" fetchpriority="high">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="images/hero-960.webp" type="image/webp" fetchpriority="high" media="(max-width: 768px)">
+  <link rel="preload" as="image" href="images/hero.webp" type="image/webp" fetchpriority="high" media="(min-width: 769px)">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap"></noscript>
   <link rel="stylesheet" href="styles.css">
 
   <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BF2FDR6KMM"></script>
+  <!-- Google Analytics + Meta Pixel: stubs run now, loaders fetched 1s after page load -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-BF2FDR6KMM');
-  </script>
-
-  <!-- Meta Pixel -->
-  <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
     if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
+    n.queue=[]}(window, document);
     fbq('init', '282429905966327');
     fbq('track', 'PageView');
+    window.addEventListener('load', function(){ setTimeout(function(){
+      var g = document.createElement('script'); g.async = true;
+      g.src = 'https://www.googletagmanager.com/gtag/js?id=G-BF2FDR6KMM'; document.head.appendChild(g);
+      var f = document.createElement('script'); f.async = true;
+      f.src = 'https://connect.facebook.net/en_US/fbevents.js'; document.head.appendChild(f);
+    }, 1000); });
   </script>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=282429905966327&ev=PageView&noscript=1" alt=""></noscript>
 
@@ -269,10 +271,10 @@
         <a href="#contact" class="btn btn-primary btn-lg">Get a Free Quote</a>
         <a href="#services" class="btn btn-outline btn-lg">Our Services</a>
       </div>
-      <a class="hero-google-rating" href="https://maps.app.goo.gl/oMuxESQJEUkaxM8R7" target="_blank" rel="noopener" aria-label="See our Google reviews">
+      <a class="hero-google-rating" href="https://maps.app.goo.gl/oMuxESQJEUkaxM8R7" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-        <span class="hero-google-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-        <b>5.0</b> on Google
+        <span class="hero-google-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <b>5.0</b> on Google<span class="sr-only"> — read our reviews</span>
       </a>
       <div class="hero-trust">
         <div class="trust-item">
@@ -303,7 +305,7 @@
         <!-- Mowing -->
         <a href="mowing/" class="service-card">
           <div class="service-icon">
-            <img src="img/mower-icon-t.png" alt="Lawn mowing service in Gretna and Omaha" width="32" height="32" class="icon-green" loading="lazy">
+            <img src="img/mower-icon.webp" alt="Lawn mowing service in Gretna and Omaha" width="32" height="32" class="icon-green" loading="lazy">
           </div>
           <h3>Mowing</h3>
           <ul>
@@ -316,7 +318,7 @@
         <!-- Fertilization -->
         <a href="fertilization/" class="service-card">
           <div class="service-icon">
-            <img src="img/fertilization-icon.png" alt="Lawn fertilization and weed control in Omaha metro" width="38" height="38" class="icon-green" loading="lazy">
+            <img src="img/fertilization-icon.webp" alt="Lawn fertilization and weed control in Omaha metro" width="38" height="38" class="icon-green" loading="lazy">
           </div>
           <h3>Fertilization</h3>
           <ul>
@@ -329,7 +331,7 @@
         <!-- Aeration -->
         <a href="aeration/" class="service-card">
           <div class="service-icon">
-            <img src="img/aeration-icon-t.png" alt="Lawn aeration and over-seeding service" width="32" height="32" class="icon-green" loading="lazy">
+            <img src="img/aeration-icon.webp" alt="Lawn aeration and over-seeding service" width="32" height="32" class="icon-green" loading="lazy">
           </div>
           <h3>Aeration & Over-Seeding</h3>
           <ul>
@@ -342,7 +344,7 @@
         <!-- Mulch/Rock -->
         <a href="mulch-rock/" class="service-card">
           <div class="service-icon">
-            <img src="img/rock-mulch-icon-t.png" alt="Mulch and rock delivery and installation" width="26" height="26" class="icon-green" loading="lazy">
+            <img src="img/rock-mulch-icon.webp" alt="Mulch and rock delivery and installation" width="26" height="26" class="icon-green" loading="lazy">
           </div>
           <h3>Mulch & Rock</h3>
           <ul>
@@ -355,7 +357,7 @@
         <!-- Lawn Cleanup -->
         <a href="cleanup/" class="service-card">
           <div class="service-icon">
-            <img src="img/broom-icon.png" alt="Spring and fall lawn cleanup service" width="32" height="32" class="icon-green" loading="lazy">
+            <img src="img/broom-icon.webp" alt="Spring and fall lawn cleanup service" width="32" height="32" class="icon-green" loading="lazy">
           </div>
           <h3>Lawn Cleanup</h3>
           <ul>
@@ -432,10 +434,10 @@
       <div class="about-grid">
         <div class="about-images">
           <div class="about-img-main">
-            <img src="images/landscaping.jpg" alt="Professional landscaping with mulch and trimmed shrubs in Omaha metro" width="1920" height="1440" loading="lazy">
+            <img src="images/landscaping.webp" alt="Professional landscaping with mulch and trimmed shrubs in Omaha metro" width="1000" height="750" loading="lazy">
           </div>
           <div class="about-img-accent">
-            <img src="images/edging.jpg" alt="Clean lawn edging along sidewalk in Gretna, NE" width="1000" height="667" loading="lazy">
+            <img src="images/edging-360.webp" alt="Clean lawn edging along sidewalk in Gretna, NE" width="360" height="240" loading="lazy">
           </div>
           <div class="about-stat">
             <span class="stat-number">5+</span>
@@ -474,12 +476,12 @@
       <div class="section-header">
         <span class="section-tag">What Neighbors Say</span>
         <h2>Trusted by Homeowners Across Gretna & Omaha</h2>
-        <a href="https://maps.app.goo.gl/oMuxESQJEUkaxM8R7" class="google-rating" target="_blank" rel="noopener" aria-label="See all our Google reviews">
+        <a href="https://maps.app.goo.gl/oMuxESQJEUkaxM8R7" class="google-rating" target="_blank" rel="noopener">
           <svg aria-hidden="true" width="32" height="32" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
           <div class="google-rating-info">
             <span class="google-rating-score">5.0</span>
-            <span class="google-rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <span class="google-rating-count">Based on 8 Google Reviews</span>
+            <span class="google-rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <span class="google-rating-count">Based on 8 Google Reviews<span class="sr-only"> — read them on Google</span></span>
           </div>
         </a>
       </div>
@@ -764,6 +766,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
